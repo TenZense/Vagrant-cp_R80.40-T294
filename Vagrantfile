@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 18190, host: 18190
   config.vm.network "forwarded_port", guest: 18264, host: 18264
   config.vm.network "forwarded_port", guest: 19009, host: 19009
-  config.vm.provision "shell", name: "CP ftw", path: "bootstrap.sh", privileged: false
+  config.vm.provision "shell", name: "CP ftw", path: "mgmt_bootstrap.sh", privileged: false
   config.vm.synced_folder '.', '/vagrant', disabled: true
   config.ssh.sudo_command = "%c"
 end
